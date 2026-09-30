@@ -1,0 +1,1145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Jolie ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #0d0810;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* =========================
+           BACKGROUND
+        ========================= */
+
+        .background {
+            position: fixed;
+            inset: 0;
+            z-index: -5;
+
+            background:
+                radial-gradient(
+                    circle at 20% 20%,
+                    rgba(255, 105, 155, 0.18),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 80% 80%,
+                    rgba(184, 92, 255, 0.14),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #0d0810,
+                    #160b17,
+                    #0b0710
+                );
+        }
+
+        /* =========================
+           STARS
+        ========================= */
+
+        .stars {
+            position: fixed;
+            inset: 0;
+            z-index: -4;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+
+            background: white;
+            border-radius: 50%;
+
+            opacity: 0.4;
+
+            animation:
+                twinkle
+                3s
+                infinite
+                ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.15;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.9;
+                transform: scale(1.5);
+            }
+        }
+
+        /* =========================
+           FLOATING HEARTS
+        ========================= */
+
+        .heart {
+            position: fixed;
+
+            bottom: -40px;
+
+            color: rgba(255, 120, 165, 0.45);
+
+            pointer-events: none;
+
+            z-index: 20;
+
+            animation:
+                floatUp
+                linear
+                forwards;
+        }
+
+        @keyframes floatUp {
+
+            0% {
+                transform:
+                    translateY(0)
+                    rotate(0deg)
+                    scale(0.8);
+
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            100% {
+                transform:
+                    translateY(-110vh)
+                    rotate(360deg)
+                    scale(1.3);
+
+                opacity: 0;
+            }
+        }
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 100px 20px;
+
+            text-align: center;
+        }
+
+        .content {
+            width: 100%;
+            max-width: 850px;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            flex-direction: column;
+        }
+
+        .small-title {
+            color: #ff9fbd;
+
+            font-size: 13px;
+
+            letter-spacing: 5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size:
+                clamp(65px, 12vw, 125px);
+
+            font-weight: normal;
+
+            line-height: 0.95;
+
+            margin-bottom: 35px;
+        }
+
+        .pink {
+            background:
+                linear-gradient(
+                    90deg,
+                    #ff719f,
+                    #ffd0df,
+                    #ff8eb2
+                );
+
+            -webkit-background-clip: text;
+
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .hero-text {
+            color: #c5bcc5;
+
+            max-width: 650px;
+
+            margin: auto;
+
+            font-size: 18px;
+
+            line-height: 1.9;
+        }
+
+        .scroll {
+            margin-top: 70px;
+
+            color: #716873;
+
+            font-size: 11px;
+
+            letter-spacing: 4px;
+
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(8px);
+            }
+        }
+
+        /* =========================
+           HEADINGS
+        ========================= */
+
+        h2 {
+            font-size:
+                clamp(40px, 7vw, 65px);
+
+            font-weight: normal;
+
+            margin-bottom: 30px;
+        }
+
+        .description {
+            color: #aaa0aa;
+
+            font-size: 17px;
+
+            line-height: 1.9;
+
+            margin-bottom: 45px;
+        }
+
+        /* =========================
+           CARDS
+        ========================= */
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+        .card {
+            padding: 30px;
+
+            text-align: left;
+
+            border-radius: 22px;
+
+            background:
+                rgba(255,255,255,0.035);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.08);
+
+            backdrop-filter: blur(15px);
+
+            transition:
+                transform 0.4s ease,
+                border 0.4s ease,
+                background 0.4s ease;
+        }
+
+        .card:hover {
+            transform:
+                translateY(-7px);
+
+            border-color:
+                rgba(255,130,170,0.45);
+
+            background:
+                rgba(255,100,150,0.07);
+        }
+
+        .emoji {
+            font-size: 28px;
+        }
+
+        .card h3 {
+            font-size: 20px;
+
+            font-weight: normal;
+
+            margin:
+                15px 0 10px;
+        }
+
+        .card p {
+            color: #948b95;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+        }
+
+        /* =========================
+           COUNTER
+        ========================= */
+
+        .counter {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+
+            margin-top: 40px;
+        }
+
+        .time-box {
+            width: 120px;
+
+            padding: 25px 10px;
+
+            border-radius: 20px;
+
+            background:
+                rgba(255,255,255,0.035);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.08);
+        }
+
+        .time-box strong {
+            display: block;
+
+            font-size: 34px;
+
+            font-weight: normal;
+
+            color: #ff91b1;
+
+            margin-bottom: 5px;
+        }
+
+        .time-box span {
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            color: #706870;
+        }
+
+        /* =========================
+           LOVE LETTER
+        ========================= */
+
+        .letter {
+            text-align: left;
+
+            padding: 45px;
+
+            border-radius: 25px;
+
+            background:
+                rgba(255,255,255,0.04);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.09);
+
+            backdrop-filter: blur(15px);
+
+            box-shadow:
+                0 25px 100px
+                rgba(0,0,0,0.35);
+        }
+
+        .letter p {
+            color: #c8c0c8;
+
+            font-size: 16px;
+
+            line-height: 2;
+
+            margin-bottom: 20px;
+        }
+
+        .letter strong {
+            color: #ff9fbd;
+        }
+
+        .signature {
+            color: #ff8eae;
+
+            font-size: 23px;
+
+            margin-top: 35px;
+        }
+
+        /* =========================
+           FINAL MESSAGE
+        ========================= */
+
+        .final h2 {
+            font-size:
+                clamp(45px, 8vw, 80px);
+        }
+
+        .final-text {
+            max-width: 650px;
+
+            margin: auto;
+
+            color: #b2a9b2;
+
+            font-size: 18px;
+
+            line-height: 2;
+        }
+
+        .big-heart {
+            display: block;
+
+            font-size: 70px;
+
+            margin-top: 45px;
+
+            animation:
+                heartbeat
+                1.5s
+                infinite;
+        }
+
+        @keyframes heartbeat {
+
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            15% {
+                transform: scale(1.18);
+            }
+
+            30% {
+                transform: scale(1);
+            }
+
+            45% {
+                transform: scale(1.1);
+            }
+        }
+
+        footer {
+            text-align: center;
+
+            padding: 30px;
+
+            color: #554d55;
+
+            font-size: 12px;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 650px) {
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .letter {
+                padding: 28px;
+            }
+
+            .time-box {
+                width: 85px;
+            }
+
+            .time-box strong {
+                font-size: 27px;
+            }
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="background"></div>
+
+    <div
+        class="stars"
+        id="stars">
+    </div>
+
+
+    <!-- =========================
+         INTRO
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="content">
+
+            <div class="small-title">
+                a little something for you
+            </div>
+
+            <h1>
+                Jolie<span class="pink">. ❤️</span>
+            </h1>
+
+            <p class="hero-text">
+                I wanted to make you something that you could come back
+                to whenever you wanted to remember just how much you mean
+                to me.
+            </p>
+
+            <div class="scroll">
+                KEEP SCROLLING ↓
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         WHAT SHE MEANS
+    ========================= -->
+
+    <section>
+
+        <div class="content">
+
+            <div class="small-title">
+                if I could put it into words
+            </div>
+
+            <h2>
+                You mean so much to me.
+            </h2>
+
+            <p class="description">
+
+                I don't think I could ever find enough words to explain
+                everything I love about you.
+
+                <br><br>
+
+                I love your laugh.
+                I love your voice.
+                I love how kind and loving you are.
+
+                <br><br>
+
+                I love how genuinely kindhearted you are,
+                and I love that I can just be with you —
+                even if we're sitting in silence —
+                and still feel completely happy.
+
+            </p>
+
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <div class="emoji">💗</div>
+
+                    <h3>
+                        Your laugh
+                    </h3>
+
+                    <p>
+                        Your laugh is one of those little things
+                        that can instantly make my day better.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="emoji">🎀</div>
+
+                    <h3>
+                        Your voice
+                    </h3>
+
+                    <p>
+                        I could listen to you talk for hours.
+                        There's just something about your voice
+                        that makes me happy.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="emoji">🌷</div>
+
+                    <h3>
+                        Your heart
+                    </h3>
+
+                    <p>
+                        You're one of the kindest and most loving
+                        people I've ever had the chance to know.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="emoji">🫶</div>
+
+                    <h3>
+                        Just being with you
+                    </h3>
+
+                    <p>
+                        Even when we're not saying anything,
+                        being with you still feels like
+                        exactly where I want to be.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         COUNTER
+    ========================= -->
+
+    <section>
+
+        <div class="content">
+
+            <div class="small-title">
+                since September 4th, 2026
+            </div>
+
+            <h2>
+                Every second with you matters.
+            </h2>
+
+            <p class="description">
+                And hopefully, this number keeps getting bigger
+                for a very, very long time.
+            </p>
+
+
+            <div class="counter">
+
+                <div class="time-box">
+
+                    <strong id="days">
+                        0
+                    </strong>
+
+                    <span>
+                        Days
+                    </span>
+
+                </div>
+
+
+                <div class="time-box">
+
+                    <strong id="hours">
+                        0
+                    </strong>
+
+                    <span>
+                        Hours
+                    </span>
+
+                </div>
+
+
+                <div class="time-box">
+
+                    <strong id="minutes">
+                        0
+                    </strong>
+
+                    <span>
+                        Minutes
+                    </span>
+
+                </div>
+
+
+                <div class="time-box">
+
+                    <strong id="seconds">
+                        0
+                    </strong>
+
+                    <span>
+                        Seconds
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LOVE LETTER
+    ========================= -->
+
+    <section>
+
+        <div class="content">
+
+            <div class="small-title">
+                something from my heart
+            </div>
+
+            <h2>
+                Dear Jolie,
+            </h2>
+
+
+            <div class="letter">
+
+                <p>
+                    Happy two weeks, my love. ❤️
+                </p>
+
+
+                <p>
+                    I know two weeks might not sound like a very long
+                    time, but somehow you've already become such a huge
+                    part of my life.
+                </p>
+
+
+                <p>
+                    You make me happier than I've been in a really long
+                    time. Even something as simple as seeing your name
+                    pop up on my screen can completely change my mood.
+                </p>
+
+
+                <p>
+                    I love everything about you.
+                </p>
+
+
+                <p>
+                    I love your laugh.
+                    I love your voice.
+                    I love how nice you are.
+                    I love how loving you are.
+                    I love how kindhearted you are.
+                </p>
+
+
+                <p>
+                    But more than anything, I love how it feels to be
+                    with you.
+                </p>
+
+
+                <p>
+                    Even if we're doing absolutely nothing.
+                    Even if we're just sitting there in silence.
+                    I don't need anything special to be happening.
+                    If I'm with you, I'm happy.
+                </p>
+
+
+                <p>
+                    I know we're long distance, and sometimes I wish more
+                    than anything that I could just be there beside you.
+                    I wish I could hug you, sit next to you, laugh with
+                    you, and experience all the little everyday things
+                    together.
+                </p>
+
+
+                <p>
+                    And honestly, I really don't want to lose you.
+                </p>
+
+
+                <p>
+                    I don't know exactly what the future holds for us.
+                    We're still at the beginning of our story.
+                    But if I'm being completely honest...
+                </p>
+
+
+                <p>
+                    I really, really hope you're the one.
+                </p>
+
+
+                <p>
+                    I hope that someday we can look back at this little
+                    website and remember when we'd only been together for
+                    two weeks.
+                </p>
+
+
+                <p>
+                    I hope we get to see how far this can go.
+                    I hope the distance becomes a memory.
+                    And I hope that one day, instead of missing you
+                    through a screen, I get to wake up and have you
+                    right there beside me.
+                </p>
+
+
+                <p>
+                    Until then, I'll keep appreciating every second
+                    I get with you.
+                </p>
+
+
+                <p>
+                    Thank you for making me this happy.
+                </p>
+
+
+                <div class="signature">
+                    Forever hoping it's you,<br>
+                    Snorri ❤️
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL
+    ========================= -->
+
+    <section class="final">
+
+        <div class="content">
+
+            <div class="small-title">
+                one last thing
+            </div>
+
+
+            <h2>
+                I don't know<br>
+                where our story ends...
+            </h2>
+
+
+            <p class="final-text">
+
+                But I really hope I get to find out
+                with you.
+
+                <br><br>
+
+                I hope you're the person I get to keep
+                choosing.
+
+                <br><br>
+
+                And I hope that this is only the beginning
+                of something beautiful.
+
+            </p>
+
+
+            <span class="big-heart">
+                ❤️
+            </span>
+
+
+            <p
+                class="final-text"
+                style="margin-top: 30px;"
+            >
+                Happy 2 weeks, Jolie.
+                <br><br>
+                I love being yours.
+                <br><br>
+                — Snorri
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        Made for Jolie, with love from Snorri ❤️
+    </footer>
+
+
+    <script>
+
+        /* =========================
+           ANNIVERSARY DATE
+        ========================= */
+
+        const anniversary =
+            new Date("2026-09-04T00:00:00");
+
+
+        /* =========================
+           COUNTER
+        ========================= */
+
+        function updateCounter() {
+
+            const now =
+                new Date();
+
+            const difference =
+                now - anniversary;
+
+            if (difference < 0) {
+                return;
+            }
+
+
+            const totalSeconds =
+                Math.floor(
+                    difference / 1000
+                );
+
+
+            const days =
+                Math.floor(
+                    totalSeconds / 86400
+                );
+
+
+            const hours =
+                Math.floor(
+                    (totalSeconds % 86400)
+                    / 3600
+                );
+
+
+            const minutes =
+                Math.floor(
+                    (totalSeconds % 3600)
+                    / 60
+                );
+
+
+            const seconds =
+                totalSeconds % 60;
+
+
+            document.getElementById("days")
+                .textContent = days;
+
+            document.getElementById("hours")
+                .textContent = hours;
+
+            document.getElementById("minutes")
+                .textContent = minutes;
+
+            document.getElementById("seconds")
+                .textContent = seconds;
+
+        }
+
+
+        updateCounter();
+
+        setInterval(
+            updateCounter,
+            1000
+        );
+
+
+        /* =========================
+           STARS
+        ========================= */
+
+        const stars =
+            document.getElementById("stars");
+
+
+        for (
+            let i = 0;
+            i < 140;
+            i++
+        ) {
+
+            const star =
+                document.createElement("div");
+
+
+            star.className =
+                "star";
+
+
+            star.style.left =
+                Math.random() * 100 + "%";
+
+
+            star.style.top =
+                Math.random() * 100 + "%";
+
+
+            star.style.animationDelay =
+                Math.random() * 3 + "s";
+
+
+            star.style.opacity =
+                Math.random();
+
+
+            stars.appendChild(star);
+
+        }
+
+
+        /* =========================
+           FLOATING HEARTS
+        ========================= */
+
+        function createHeart() {
+
+            const heart =
+                document.createElement("div");
+
+
+            heart.className =
+                "heart";
+
+
+            const hearts = [
+                "♥",
+                "♡",
+                "❤",
+                "💕"
+            ];
+
+
+            heart.innerHTML =
+                hearts[
+                    Math.floor(
+                        Math.random()
+                        * hearts.length
+                    )
+                ];
+
+
+            heart.style.left =
+                Math.random() * 100 + "vw";
+
+
+            heart.style.fontSize =
+                12 +
+                Math.random() * 22 +
+                "px";
+
+
+            heart.style.animationDuration =
+                6 +
+                Math.random() * 6 +
+                "s";
+
+
+            document.body.appendChild(
+                heart
+            );
+
+
+            setTimeout(
+                () => heart.remove(),
+                12000
+            );
+
+        }
+
+
+        setInterval(
+            createHeart,
+            1100
+        );
+
+    </script>
+
+</body>
+</html>
+```
